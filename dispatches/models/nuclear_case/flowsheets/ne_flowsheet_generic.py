@@ -38,8 +38,8 @@ def build_ne_flowsheet(m):
     m.fs.tank_holdup_previous = Var(within=NonNegativeReals,
                                     doc="Hold at the beginning of the period (kg)")
     #let's get rid of this and focus on the turbine
-    #m.fs.h2_to_pipeline = Var(within=NonNegativeReals,
-    #                          doc="Hydrogen flowrate to the pipeline (kg/hr)")
+    m.fs.h2_to_pipeline = Var(within=NonNegativeReals,
+                              doc="Hydrogen flowrate to the pipeline (kg/hr)")
     m.fs.h2_to_turbine = Var(within=NonNegativeReals,
                              doc="Hydrogen flowrate to the turbine (kg/hr)")
     m.fs.h2_turbine_power = Var(within=NonNegativeReals,
